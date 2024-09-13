@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(19, 19, 19);
+        }
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 50px;
+            color: white;
+        }
+        h2{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 90%;
+            color: white;
+            position:relative;
+            top:80%;
+            left:3.5%
+        }
+        .selper{
+            position: absolute;
+            top: 90px;
+            right: 450px;
+        }
+/*
+        div{
+            background-color: brown;
+            height: 150px;
+            width: 150px;
+            border-radius: 5%;
+            margin: 50px;
+        }
+*/
+
+        #myDIV {
+        
+        display: grid;
+        gap: 8%;
+        padding: 10px;
+        grid-template-columns: auto auto auto auto auto;
+        justify-items: center;
+        position: absolute;
+        top: 35%;
+        margin-left: 20%;
+        
+        }
+        #myDIV div {
+        background-color: brown;
+        height: 115px;
+        width: 115px;
+        text-align: center;
+        font-size: 30px;
+        border-radius: 5%;
+        cursor: pointer;
+        
+        }
+
+
+
+        .img1{
+            background-image: url(img/perfil\ 1.jpg);
+            background-size: contain;
+            cursor: pointer;;
+        }
+        .img2{
+            background-image: url(img/perfil\ 2.jpg);
+            background-size: contain;
+        }
+        .img3{
+            background-image: url(img/perfil\ 3.png);
+            background-size: contain;
+        }
+        .img4{
+            background-image: url(img/perfil\ 4.jpg);
+            background-size: contain;
+        }
+        .img5{
+            background-image: url(img/perfil\ 1.jpg);
+            background-size: contain;
+        }
+        .img1:hover{
+            background-color: rgba(122, 122, 122, 0.3);
+        transform: scale(1.05);   
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+        }
+        .img2:hover{
+            background-color: rgba(122, 122, 122, 0.3);
+        transform: scale(1.05);   
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+        }
+        .img3:hover{
+            background-color: rgba(122, 122, 122, 0.3);
+        transform: scale(1.05);   
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+        }
+        .img4:hover{
+            background-color: rgba(122, 122, 122, 0.3);
+        transform: scale(1.05);   
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+        }
+        .img5:hover{
+            background-color: rgba(122, 122, 122, 0.3);
+        transform: scale(1.05);   
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+        }
+
+
+
+
+        button{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            color: rgb(116, 116, 116);
+            background-color: rgba(0, 0, 0, 0);
+            width: 220px;
+            height: 35px;
+            border: 2px solid;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+        background-color: rgba(122, 122, 122, 0.3);
+        transform: scale(1.05);      /* Aumenta ligeramente el tamaño */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra sutil */
+}
+        #btn1{
+        position: absolute;
+        top: 500px;
+        right: 580px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1 class="selper">¿Quien esta viendo?</h1>
+
+    <div id="myDIV">
+        <div class="img1"><h2>Perfil 1</h2></div>
+        <div class="img2"><h2>Perfil 2</h2></div>
+        <div class="img3"><h2>Perfil 3</h2></div>
+        <div class="img4"><h2>Perfil 4</h2></div>
+        <div class="img5"><h2>Perfil 5</h2></div>
+        
+
+    </div>
+    <button id="btn1">ADMINISTRAR PERFILES</button>
+
+</body>
+</html>
