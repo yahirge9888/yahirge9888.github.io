@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b3a8c" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <title>Mapa de la Facultad | Croquis interactivo del campus</title>
+  <meta name="description" content="Croquis interactivo de la facultad: encuentra la biblioteca, cafetería, edificios y servicios, y consulta cómo llegar." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-logo">◈</span>
+      <div>
+        <h1>Mapa de la Facultad</h1>
+        <p>Croquis interactivo del campus · Prototipo</p>
+      </div>
+    </div>
+    <div class="search">
+      <span class="search-icon">⌕</span>
+      <input id="search-input" type="search" placeholder="Buscar biblioteca, cafetería, edificio A…" autocomplete="off" />
+      <ul id="search-results" class="search-results" hidden></ul>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside id="sidebar" class="sidebar" aria-label="Lista de lugares">
+      <div class="drawer-head">
+        <span class="drawer-grip" aria-hidden="true"></span>
+        <strong>Lugares</strong>
+        <button id="drawer-close" class="drawer-close" aria-label="Cerrar lista">×</button>
+      </div>
+      <div id="filters" class="filters" role="group" aria-label="Filtros por categoría"></div>
+      <ul id="place-list" class="place-list"></ul>
+    </aside>
+
+    <section class="map-wrap" aria-label="Mapa">
+      <svg id="map" viewBox="0 0 1024 580" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Croquis de la facultad"></svg>
+
+      <div class="map-controls">
+        <button id="locate-btn" class="locate" aria-label="Mostrar mi ubicación" title="Mi ubicación">◎</button>
+        <button id="zoom-in" aria-label="Acercar">+</button>
+        <button id="zoom-out" aria-label="Alejar">−</button>
+        <button id="zoom-reset" aria-label="Restablecer vista">⟲</button>
+      </div>
+
+      <div class="compass" aria-hidden="true"><span>N</span><i></i></div>
+
+      <div id="toast" class="toast" role="status" hidden></div>
+
+      <article id="info-card" class="info-card" hidden>
+        <button id="info-close" class="info-close" aria-label="Cerrar">×</button>
+        <span id="info-tag" class="tag"></span>
+        <h2 id="info-name"></h2>
+        <p id="info-desc"></p>
+        <dl>
+          <div><dt>Horario</dt><dd id="info-hours"></dd></div>
+          <div><dt>Contiene</dt><dd id="info-includes"></dd></div>
+        </dl>
+        <button id="route-btn" class="primary">Cómo llegar desde la entrada</button>
+        <p id="route-note" class="route-note" hidden></p>
+      </article>
+
+      <button id="list-toggle" class="list-toggle" aria-expanded="false" aria-controls="sidebar">☰ Lugares</button>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
